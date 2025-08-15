@@ -5,5 +5,27 @@
 
 body{
     display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin: 10px;
+
+}
+
+.container>div{
+    height: auto;
+    flex: 1 0 auto;
+    display: flex;
     flex-direction: column;
+}
+.container>div>*{
+    flex:1; /*makes even boxes*/
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 500px;
+    height: 500px;
 }
