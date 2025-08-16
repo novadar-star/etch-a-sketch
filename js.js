@@ -1,7 +1,7 @@
 createDiv(10)
 function createDiv(size){
     const outerscreen = document.querySelector(".container");
-    const sketchpad = document.querySelector(".sketchpad");
+    const sidepanel = document.querySelector(".features-container");
     for(let i=0; i<size; i++){
         const col = document.createElement("div");
         col.classList.add("col");
@@ -20,8 +20,11 @@ function createDiv(size){
 
                 col.style.borderBottom= "none";
                 outerscreen.appendChild(col);
+                sidepanel.style.border="1px solid yellow";
+                outerscreen.style.border="1px solid black";
+
         }
-        sketchpad.style.borderTop = "1px solid black";
+
     
     
 }
