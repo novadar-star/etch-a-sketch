@@ -31,14 +31,7 @@ body{
     height: 500px;
 }
 
-div button{
-    margin-top: 20px;
-    padding:10px;
-    cursor: pointer;
-    display: inline-block;
-    width: 80px;
-    border-radius:7px;
-}
+
 
 .features-container {
     display: grid;
@@ -53,7 +46,7 @@ div button{
 
 }
 
-.size, .bucket,.eraser,.restart {
+.size, .bucket,.eraser,.restart, .red, .blue, .yellow, .random{
     padding:5px 10px;
     display: flex;
     justify-content: flex-start;
@@ -61,4 +54,20 @@ div button{
     width:auto;
     margin: auto;
     border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
+button:hover{
+    background-color: rgb(200, 199, 199);
+}
+
+/*
+figure out how to make the button adjust automatically base on size 
+of btn container
+*/
+
+h6 {
+    margin-top: 70px;
+}
+
