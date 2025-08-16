@@ -39,3 +39,18 @@ div button{
     width: 100px;
     border-radius:7px;
 }
+
+.features-container {
+    margin: 5px;
+    background-color: antiquewhite;
+    border: 1px solid black;
+    width: 40px;    
+    border-radius: 5px;
+}
+.size, .bucket,.eraser,.restart {
+    padding:50px 30px;
+    display: flex;
+    justify-content: space-around;
+   width:auto;
+   margin: auto;
+}
