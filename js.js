@@ -1,7 +1,6 @@
-createDiv(50)
+createDiv(10)
 function createDiv(size){
     const outerscreen = document.querySelector(".container");
-    const sidepanel = document.querySelector(".features-container");
     for(let i=0; i<size; i++){
         const col = document.createElement("div");
         col.classList.add("col");
@@ -9,25 +8,27 @@ function createDiv(size){
                 const row = document.createElement('div');
                 row.classList.add("row");
                 row.style.border = "1px solid white"; //add to button size
-
                 col.appendChild(row);
             }
                 col.style.background = "pink";
 //                col.style.border= "1px solid white";
                 col.style.borderLeft= "none";
-                col.style.borderRight= "none";
-                
-
+                col.style.borderRight= "none";     
                 col.style.borderBottom= "none";
-                outerscreen.appendChild(col);
-                sidepanel.style.border="1px solid yellow";
                 outerscreen.style.border="1px solid black";
+                outerscreen.appendChild(col);
 
         }
+
+
 
     
     
 }
+//features of sidepanel
+    const sidepanel = document.querySelector(".features-container");
+    sidepanel.style.border="1px solid black";
+
 
 
 
