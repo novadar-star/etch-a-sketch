@@ -1,5 +1,13 @@
-createDiv(20)
+ //acts as a placeholder for creatediv
+function askDiv(){
+    let size = prompt("How many dimensions: ", "10");
+    return size
+
+}
+
+createDiv() //calls the function
 function createDiv(size){
+    size = askDiv()
     const outerscreen = document.querySelector(".container");
     for(let i=0; i<size; i++){
         const col = document.createElement("div");
@@ -19,18 +27,11 @@ function createDiv(size){
                 outerscreen.appendChild(col);
 
         }
-
-
-
-    
     
 }
 //features of sidepanel
     const sidepanel = document.querySelector(".features-container");
     sidepanel.style.border="1px solid black";
-
-
-
 
 //blue button click will allow you to access blue
 function changeBackground(e){
