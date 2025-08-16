@@ -1,4 +1,4 @@
-//createDiv(30)
+createDiv(30)
 function createDiv(size){
     const outerscreen = document.querySelector(".container");
     for(let i=0; i<size; i++){
