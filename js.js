@@ -1,11 +1,15 @@
  //acts as a placeholder for creatediv
 function askDiv(){
-    let size = prompt("How many dimensions: ", "10");
-    return size
+    
+    let size =  prompt("How many dimensions: ", "10");
+    if(size === undefined){
+        alert("Please type according to the range")
+        return;
+    }
+        return size;
 
 }
-
-createDiv() //calls the function
+askDiv()
 function createDiv(size){
     size = askDiv()
     const outerscreen = document.querySelector(".container");
@@ -25,10 +29,12 @@ function createDiv(size){
                 col.style.borderBottom= "none";
                 outerscreen.style.border="1px solid black";
                 outerscreen.appendChild(col);
-
         }
     
 }
+createDiv()
+
+
 //features of sidepanel
     const sidepanel = document.querySelector(".features-container");
     sidepanel.style.border="1px solid black";
