@@ -4,6 +4,8 @@
 }
 
 body{
+      font-family: "Acme", sans-serif;
+
  display: flex;
  flex-direction: column;
  justify-content: center;
@@ -13,6 +15,10 @@ body{
 overflow: hidden;
 
 
+}
+
+h1 {
+    margin: 10px;
 }
 
 .container div{
@@ -88,6 +94,7 @@ of btn container
 }
 
 h6 {
-    margin-top: 30px;
+    margin: 10px;
+    text-align: center;
 }
 
