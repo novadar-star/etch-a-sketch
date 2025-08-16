@@ -46,7 +46,9 @@ body{
     overflow: hidden;
 
 }
-
+.panel {
+    margin: 0 10px;
+}
 .size, .bucket,.eraser,.restart, .red, .blue, .yellow, .random{
     padding:5px 10px;
     display: flex;

@@ -1,4 +1,4 @@
-createDiv(10)
+createDiv(50)
 function createDiv(size){
     const outerscreen = document.querySelector(".container");
     const sidepanel = document.querySelector(".features-container");
