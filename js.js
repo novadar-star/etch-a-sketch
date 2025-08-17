@@ -1,10 +1,10 @@
  //acts as a placeholder for creatediv
+ //why is my prompt doing double
 function askDiv(){
     
-    let size =  prompt("How many dimensions: ", "10");
+    let size = prompt("How many dimensions: ");
     if(size === undefined){
         alert("Please type according to the range")
-        return;
     }
         return size;
 
