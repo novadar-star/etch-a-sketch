@@ -3,17 +3,24 @@
  
 function askDiv(){
     
-    let size = prompt("How many dimensions: ");
-    if(size === undefined){
-        alert("Please type according to the range")
+    let size = prompt("How many dimensions: ","10");
+    if(size === undefined || size > 100 || size < 1 ){
+        alert("Please type according to the range: 1-100")
     }
         return size;
-
 }
 
-size =  askDiv()
+
+//size =  askDiv()
+//need to return huhu
+document.querySelector(".size").onclick = function(){ //once button is clickthe function changetoblue is activated
+    size = askDiv()
+ createDiv(size)
+}
+
+
 function createDiv(size){
-   
+
     const outerscreen = document.querySelector(".container");
     for(let i=0; i<size; i++){
         const col = document.createElement("div");
@@ -21,7 +28,7 @@ function createDiv(size){
             for(let j=0; j<size;j++){
                 const row = document.createElement('div');
                 row.classList.add("row");
-               row.style.border = "1px solid #504f4fff"; //add to button size
+                row.style.border = "1px solid #504f4fff"; //add to button size
                 col.appendChild(row);
             }
                 col.style.background =  "#ffffffff";
@@ -34,12 +41,14 @@ function createDiv(size){
         }
     
 }
-createDiv(40)
+
+
 
 
 //features of sidepanel
 const sidepanel = document.querySelector(".features-container");
 sidepanel.style.border="1px solid black";
+
 
 //blue button click will allow you to access blue
 function changeToBlue(e){
@@ -54,8 +63,10 @@ function changeToYellow(e){
 function eraseColor(e){
     e.currentTarget.style.backgroundColor = "#ffffffff";
 }
+
 function randomColor(e){
-    const randomColor = Math.floor(Math.random()*16777215).toString(16); //value hex code
+   const randomColor = Math.floor(Math.random()*16777215).toString(16); //value hex code
+
     e.currentTarget.style.backgroundColor = "#" + randomColor;
 }
 function fillBucket(e){
@@ -104,6 +115,7 @@ document.querySelector(".random").onclick = function(){ //once button is clickth
 
 document.querySelector(".bucket").onclick = function(){
    const canvas  = document.querySelectorAll(".col") //need to select the whole container44
+   
    canvas.forEach(function(cols){
     cols.addEventListener("mouseover", fillBucket)
   
@@ -116,6 +128,4 @@ document.querySelector(".restart").onclick = function (){
     return false;
 }
 
-document.querySelector(".size").onclick = function changeGrid(){
- 
-}
+
