@@ -25,14 +25,16 @@ h1 {
     margin-bottom: 0;
 }
 
-.container div{
+.container div  {
     height: auto;
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
+    
 }
 .container>div>*{
     flex:1; /*makes even boxes*/
+    
 }
 
 .container{
@@ -46,6 +48,7 @@ h1 {
 
 .sketchpad{
     margin-bottom: -10px;
+    
 }
 
 
@@ -84,8 +87,8 @@ button:hover{
 /*
 figure out how to make the button adjust automatically base on size 
 of btn container
+ADD SHADOW TO COXNTAINER
 */
-
 .outer {
     display: flex;
     justify-content: center;

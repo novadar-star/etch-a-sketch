@@ -35,7 +35,7 @@ function createDiv(size){
         }
     
 }
-createDiv(20)
+createDiv(40)
 
 
 //features of sidepanel
@@ -54,17 +54,29 @@ function changeToYellow(e){
 }
 
 function eraseColor(e){
-    e.currentTarget.style.backgroundColor = "#504f4fff";
+    e.currentTarget.style.backgroundColor = "#ffffffff";
 }
 
 function randomColor(e){
-     const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    const randomColor = Math.floor(Math.random()*16777215).toString(16); //value hex code
     e.currentTarget.style.backgroundColor = "#" + randomColor;
 }
 
+function fillBucket(e){
+//gets override from other colors
+    e.currentTarget.style.backgroundColor = "pink";
+}
+
+
+/*function refresh(location){
+    location.reload();
+    return false;
+}
+*/
+
 document.querySelector(".blue").onclick = function(){ //once button is clickthe function changetoblue is activated
     const div = document.querySelectorAll(".row") 
-    div.forEach(function(divs){ 
+    div.forEach(function(divs){     
     divs.addEventListener("mouseover", changeToBlue)
 })
 }
@@ -93,7 +105,22 @@ document.querySelector(".eraser").onclick = function(){ //once button is clickth
 
 document.querySelector(".random").onclick = function(){ //once button is clickthe function changetoblue is activated
     const div = document.querySelectorAll(".row") 
-    div.forEach(function(divs){ 
+    div.forEach(function(divs){ //iterate over each pixel row
     divs.addEventListener("mouseover", randomColor)
 })
+}
+
+document.querySelector(".bucket").onclick = function(){
+   const canvas  = document.querySelectorAll(".col") //need to select the whole container44
+   canvas.forEach(function(cols){
+    cols.addEventListener("mouseover", fillBucket)
+  
+   })
+  
+}
+
+document.querySelector(".restart").onclick = function (){
+      location.reload();
+    return false;
+
 }
