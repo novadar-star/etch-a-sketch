@@ -1,5 +1,6 @@
  //acts as a placeholder for creatediv
  //why is my prompt doing double
+ /*
 function askDiv(){
     
     let size = prompt("How many dimensions: ");
@@ -10,8 +11,10 @@ function askDiv(){
 
 }
 askDiv()
+*/
+
 function createDiv(size){
-    size = askDiv()
+   // size = askDiv()
     const outerscreen = document.querySelector(".container");
     for(let i=0; i<size; i++){
         const col = document.createElement("div");
@@ -32,7 +35,7 @@ function createDiv(size){
         }
     
 }
-createDiv()
+createDiv(20)
 
 
 //features of sidepanel
@@ -40,11 +43,24 @@ createDiv()
     sidepanel.style.border="1px solid black";
 
 //blue button click will allow you to access blue
-function changeBackground(e){
+function changeToBlue(e){
     e.currentTarget.style.backgroundColor = "blue";
 }
-
+function changeToRed(e){
+    e.currentTarget.style.backgroundColor = "red";
+}
+/*
+function buttonClickBlue(){
 const div = document.querySelectorAll(".row")
-div.forEach(function(divs){
-    divs.addEventListener("mouseover", changeBackground)
+div.forEach(function(divs){ //once button is click it must be activated
+    divs.addEventListener("mouseover", changeToBlue)
 })
+}
+*/
+
+document.querySelector(".blue").onclick = function(){
+    const div = document.querySelectorAll(".row")
+    div.forEach(function(divs){ //once button is click it must be activated
+    divs.addEventListener("mouseover", changeToBlue)
+})
+}
