@@ -1,6 +1,6 @@
  //acts as a placeholder for creatediv
  //why is my prompt doing double
- /*
+ 
 function askDiv(){
     
     let size = prompt("How many dimensions: ");
@@ -10,11 +10,10 @@ function askDiv(){
         return size;
 
 }
-askDiv()
-*/
 
+size =  askDiv()
 function createDiv(size){
-   // size = askDiv()
+   
     const outerscreen = document.querySelector(".container");
     for(let i=0; i<size; i++){
         const col = document.createElement("div");
@@ -22,7 +21,7 @@ function createDiv(size){
             for(let j=0; j<size;j++){
                 const row = document.createElement('div');
                 row.classList.add("row");
-               // row.style.border = "1px solid #504f4fff"; //add to button size
+               row.style.border = "1px solid #504f4fff"; //add to button size
                 col.appendChild(row);
             }
                 col.style.background =  "#ffffffff";
@@ -52,20 +51,18 @@ function changeToRed(e){
 function changeToYellow(e){
     e.currentTarget.style.backgroundColor = "yellow";
 }
-
 function eraseColor(e){
     e.currentTarget.style.backgroundColor = "#ffffffff";
 }
-
 function randomColor(e){
     const randomColor = Math.floor(Math.random()*16777215).toString(16); //value hex code
     e.currentTarget.style.backgroundColor = "#" + randomColor;
 }
-
 function fillBucket(e){
 //gets override from other colors
     e.currentTarget.style.backgroundColor = "pink";
 }
+
 
 
 
@@ -119,3 +116,6 @@ document.querySelector(".restart").onclick = function (){
     return false;
 }
 
+document.querySelector(".size").onclick = function changeGrid(){
+ 
+}
