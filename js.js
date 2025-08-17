@@ -11,11 +11,11 @@ function askDiv(){
 }
 
 
-//size =  askDiv()
-//need to return huhu
-document.querySelector(".size").onclick = function(){ //once button is clickthe function changetoblue is activated
+document.querySelector(".size").onclick = function(){ 
     size = askDiv()
- createDiv(size)
+    createDiv(size)
+    
+
 }
 
 
