@@ -22,15 +22,15 @@ function createDiv(size){
             for(let j=0; j<size;j++){
                 const row = document.createElement('div');
                 row.classList.add("row");
-                row.style.border = "1px solid white"; //add to button size
+                row.style.border = "1px solid #504f4fff"; //add to button size
                 col.appendChild(row);
             }
-                col.style.background = "pink";
+                col.style.background =  "#ffffffff";
 //                col.style.border= "1px solid white";
                 col.style.borderLeft= "none";
                 col.style.borderRight= "none";     
                 col.style.borderBottom= "none";
-                outerscreen.style.border="1px solid black";
+                outerscreen.style.border="1px solid #504f4fff";
                 outerscreen.appendChild(col);
         }
     
@@ -49,18 +49,51 @@ function changeToBlue(e){
 function changeToRed(e){
     e.currentTarget.style.backgroundColor = "red";
 }
-/*
-function buttonClickBlue(){
-const div = document.querySelectorAll(".row")
-div.forEach(function(divs){ //once button is click it must be activated
+function changeToYellow(e){
+    e.currentTarget.style.backgroundColor = "yellow";
+}
+
+function eraseColor(e){
+    e.currentTarget.style.backgroundColor = "#504f4fff";
+}
+
+function randomColor(e){
+     const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    e.currentTarget.style.backgroundColor = "#" + randomColor;
+}
+
+document.querySelector(".blue").onclick = function(){ //once button is clickthe function changetoblue is activated
+    const div = document.querySelectorAll(".row") 
+    div.forEach(function(divs){ 
     divs.addEventListener("mouseover", changeToBlue)
 })
 }
-*/
 
-document.querySelector(".blue").onclick = function(){
-    const div = document.querySelectorAll(".row")
-    div.forEach(function(divs){ //once button is click it must be activated
-    divs.addEventListener("mouseover", changeToBlue)
+document.querySelector(".red").onclick = function(){ //once button is clickthe function changetoblue is activated
+    const div = document.querySelectorAll(".row") 
+    div.forEach(function(divs){ 
+    divs.addEventListener("mouseover", changeToRed)
+})
+}
+
+document.querySelector(".yellow").onclick = function(){ //once button is clickthe function changetoblue is activated
+    const div = document.querySelectorAll(".row") 
+    div.forEach(function(divs){ 
+    divs.addEventListener("mouseover", changeToYellow)
+})
+}
+
+document.querySelector(".eraser").onclick = function(){ //once button is clickthe function changetoblue is activated
+    const div = document.querySelectorAll(".row") 
+    div.forEach(function(divs){ 
+    divs.addEventListener("mouseover", eraseColor)
+})
+}
+
+
+document.querySelector(".random").onclick = function(){ //once button is clickthe function changetoblue is activated
+    const div = document.querySelectorAll(".row") 
+    div.forEach(function(divs){ 
+    divs.addEventListener("mouseover", randomColor)
 })
 }
