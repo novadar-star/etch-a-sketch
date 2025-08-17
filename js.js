@@ -22,11 +22,11 @@ function createDiv(size){
             for(let j=0; j<size;j++){
                 const row = document.createElement('div');
                 row.classList.add("row");
-                row.style.border = "1px solid #504f4fff"; //add to button size
+               // row.style.border = "1px solid #504f4fff"; //add to button size
                 col.appendChild(row);
             }
                 col.style.background =  "#ffffffff";
-//                col.style.border= "1px solid white";
+               col.style.border= "1px solid white";
                 col.style.borderLeft= "none";
                 col.style.borderRight= "none";     
                 col.style.borderBottom= "none";
@@ -39,8 +39,8 @@ createDiv(40)
 
 
 //features of sidepanel
-    const sidepanel = document.querySelector(".features-container");
-    sidepanel.style.border="1px solid black";
+const sidepanel = document.querySelector(".features-container");
+sidepanel.style.border="1px solid black";
 
 //blue button click will allow you to access blue
 function changeToBlue(e){
@@ -68,11 +68,6 @@ function fillBucket(e){
 }
 
 
-/*function refresh(location){
-    location.reload();
-    return false;
-}
-*/
 
 document.querySelector(".blue").onclick = function(){ //once button is clickthe function changetoblue is activated
     const div = document.querySelectorAll(".row") 
@@ -120,7 +115,7 @@ document.querySelector(".bucket").onclick = function(){
 }
 
 document.querySelector(".restart").onclick = function (){
-      location.reload();
+    location.reload();
     return false;
-
 }
+
